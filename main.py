@@ -14,7 +14,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 
 import database
 
-TOKEN = "ТВОЙ_ТОКЕН_ОТ_BOTFATHER"
+TOKEN = "9091750628:AAGmPRPJyR7ea-OcJxLHRsott96LdDMBmNc"
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
