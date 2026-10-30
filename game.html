@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра</title>
+    <!-- Подключение скрипта Telegram -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        button { padding: 15px 30px; font-size: 18px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Тестовая игра</h1>
+    <button onclick="winGame()">Симулировать победу (+10 очков)</button>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand();
+
+        async function winGame() {
+            if (!tg.initData) {
+                alert("Откройте игру через Telegram!");
+                return;
+            }
+
+            try {
+                // Замени на адрес твоего сервера FastAPI
+                const response = await fetch("https://твой-сервер.com/api/save_score", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        initData: tg.initData,
+                        points: 10
+                    })
+                });
+
+                if (response.ok) {
+                    tg.showAlert("Очки сохранены! Вы великолепны.");
+                } else {
+                    tg.showAlert("Ошибка при сохранении.");
+                }
+            } catch (err) {
+                tg.showAlert("Ошибка сети.");
+            }
+        }
+    </script>
+</body>
+</html>
