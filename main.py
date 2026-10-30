@@ -9,7 +9,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
+А
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart, Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
@@ -39,7 +39,7 @@ app = FastAPI(lifespan=lifespan)
 # Разрешаем запросы от игр, размещенных на других доменах
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # Для большей безопасности можно указать ["https://твой-домен.github.io"]
+    allow_origins=["*"], # Для большей безопасности можно указать ["https://emil270797-cmyk.github.io/checkers/"]
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
