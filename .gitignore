@@ -1,0 +1,22 @@
+# Секреты и конфигурации
+.env
+
+# БД
+games.db
+*.db
+*.sqlite3
+*.sqlite3-journal
+
+# Системный кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальное окружение
+venv/
+.venv/
+env/
+
+# Настройки редакторов кода
+.vscode/
+.idea/
