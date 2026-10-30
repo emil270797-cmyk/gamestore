@@ -13,8 +13,13 @@ from aiogram.filters import CommandStart, Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 
 import database
+import os
 
-TOKEN = "9091750628:AAGmPRPJyR7ea-OcJxLHRsott96LdDMBmNc"
+TOKEN = os.getenv("BOT_TOKEN")
+
+if not TOKEN:
+  raise ValueError("Переменная BOT_TOKEN не найдена!")
+
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
