@@ -15,6 +15,9 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 import database
 import os
 
+from dotenv import load_dotenv
+load_dotenv()
+
 TOKEN = os.getenv("BOT_TOKEN")
 
 if not TOKEN:
