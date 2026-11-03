@@ -90,7 +90,7 @@ async def start_handler(message: types.Message):
     
     # Ссылки на веб-версии твоих игр (замени на свои URL)
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="♟ Шахматы", web_app=WebAppInfo(url="https://твой-домен/chess.html"))],
+        [InlineKeyboardButton(text="♟ Шахматы", web_app=WebAppInfo(url="https://emil270797-cmyk.github.io/checkers/"))],
         [InlineKeyboardButton(text="🔴 Шашки", web_app=WebAppInfo(url="https://твой-домен/checkers.html"))],
         [InlineKeyboardButton(text="🎲 Нарды", web_app=WebAppInfo(url="https://твой-домен/backgammon.html"))]
     ])
