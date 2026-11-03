@@ -18,7 +18,11 @@ async def init_db():
     ssl_ctx.verify_mode = ssl.CERT_NONE
 
     # Создаем пул соединений
-    pool = await asyncpg.create_pool(DATABASE_URL, ssl=ssl_ctx)
+    pool = await asyncpg.create_pool(
+        DATABASE_URL,
+        ssl=ssl_ctx,
+        statement_cache_size=0
+    )
     
     async with pool.acquire() as conn:
         await conn.execute("""
