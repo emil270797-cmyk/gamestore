@@ -93,6 +93,7 @@ async def start_handler(message: types.Message):
         [InlineKeyboardButton(text="🔴 Шашки", web_app=WebAppInfo(url="https://emil270797-cmyk.github.io/checkers/"))],
         [InlineKeyboardButton(text="🎯 Тир", web_app=WebAppInfo(url="https://emil270797-cmyk.github.io/Shooting/index.html"))],
         [InlineKeyboardButton(text="🎲 Нарды", web_app=WebAppInfo(url="https://emil270797-cmyk.github.io/nards/nards.html"))],
+        [InlineKeyboardButton(text="🔢 2048", web_app=WebAppInfo(url="https://emil270797-cmyk.github.io/twofoureight/index.html"))]
         [InlineKeyboardButton(text="🀄️ Маджонг", web_app=WebAppInfo(url="https://emil270797-cmyk.github.io/Mahjong/mahjong_adsgram.html"))]
     ])
     
